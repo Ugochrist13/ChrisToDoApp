@@ -1,0 +1,128 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+section{
+    /*add background image */
+    width: 100%;
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+    align-items: center;
+    justify-content: space-around;
+}
+.name{
+   color: brown; /*add liner gradient */
+   font-size: 2.5em;
+   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+   font-weight: 700;
+}
+.calc{
+    width: 50%;
+    background-color: silver;
+    display: flex;
+    flex-direction: column;
+    overflow: auto;
+    align-items: center;
+    row-gap: 10px;
+}
+.addTask{
+    width: 100%;
+    height: 100px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+.text{
+    width: 80%;
+    height: 60%;
+    padding-left: 10px;
+    border-radius: 10px;
+    border: none;
+}
+.addTask button{
+    height: 60%;
+    border-radius: 10px;
+    border: none;
+    font-weight: 700;
+    padding: 0px 10px;
+    letter-spacing: 0.01em;
+    overflow-wrap: break-word;
+    font-size: 1.2em;
+    cursor: pointer;
+}
+.taskList{
+    width: 95%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 10px;
+    padding-left: 10px;
+}
+.taskList li{
+    width: 100%;
+    height: 50px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    color: blue;
+}
+.taskList li p{
+    color: blue;
+}
+.taskList li button{
+    border-radius: 6px;
+    border: none;
+    font-weight: 400;
+    color: blue;
+    padding: 2px 4px;
+    overflow-wrap: break-word;
+    letter-spacing: 0.01em;
+    font-size: 1.2em;
+    cursor: pointer;
+}
+.clear{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    font-size: smaller;
+    font-weight: 700;
+    width: 70%;
+    height: 50px;
+    color: red;
+}
+
+.clear button{
+    height: 70%;
+    border-radius: 6px;
+    border: none;
+    font-weight: 700;
+    padding: 0px 10px;
+    overflow-wrap: break-word;
+    letter-spacing: 0.01em;
+    font-size: 1.2em;
+    cursor: pointer;
+}
+@media screen and (max-width: 950px) {
+    .calc{
+        width: 60%;
+    }
+    .name{
+        font-size: 2em;
+        font-weight: 500;
+    }
+}
+@media screen and (max-width: 500px) {
+    .calc{
+        width: 80%;
+    }
+    .name{
+        font-size: 1.5em;
+        font-weight: 300;
+    }
+}
