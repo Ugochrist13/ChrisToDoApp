@@ -22,11 +22,15 @@ if(localStorage.getItem("tasks") == null){
         delbtn.innerText = "Delete"
         delbtn.setAttribute("onclick", "del(this,"+ (tasks.length-1) +")")
         newTask.appendChild(delbtn)
-        taskList.appendChild(newTask) 
-        num.innerText = tasks.length
-        if(num.innerText != "" && num.innerText !== "1"){
+        taskList.appendChild(newTask)
+        if(tasks !== "[]"){
+            num.innerText = tasks.length
+        }
+        if(num.innerText != "" && num.innerText !== "0" && num.innerText !== "1"){
             plural.innerText = "s"
-        } 
+        }else{
+            plural.innerText = ""
+        }
     }
 }
 
@@ -35,10 +39,16 @@ const del = function(e, currentIndex){
     if(confirm(word) == true){
         e.parentElement.remove()
     tasks.splice(currentIndex, 1)
-    num.innerText = tasks.length
-        if(num.innerText != "" && num.innerText !== "0" && num.innerText !== "1"){
-            plural.innerText = "s"
-        }
+    if(tasks !== "[]"){
+        num.innerText = tasks.length
+    }else{
+        num.innerText = "no"
+    }
+    if(num.innerText != "" && num.innerText !== "0" && num.innerText !== "1" && num.innerText !== "no"){
+        plural.innerText = "s"
+    }else{
+        plural.innerText = ""
+    }
     let data = JSON.stringify(tasks)
     localStorage.setItem("tasks", data)
     }
@@ -50,9 +60,13 @@ clearbtn.addEventListener("click", function(e){
     if(confirm(clearAll) == true){
         taskList.innerHTML = ""
         tasks = []
-        num.innerText = tasks.length
-        if(num.innerText != "" && num.innerText !== "1"){
+        if(tasks !== "[]"){
+            num.innerText = tasks.length
+        }
+        if(num.innerText != "" && num.innerText !== "0" && num.innerText !== "1"){
             plural.innerText = "s"
+        }else{
+            plural.innerText = ""
         }
         let data = JSON.stringify(tasks)
         localStorage.setItem("tasks", data)
@@ -72,9 +86,13 @@ addbtn.addEventListener("click", function(e){
         newTask.appendChild(delbtn)
         tasks.push(input.value)
         taskList.appendChild(newTask)
-        num.innerText = tasks.length
-        if(num.innerText != "" && num.innerText !== "1"){
+        if(tasks !== "[]"){
+            num.innerText = tasks.length
+        }
+        if(num.innerText != "" && num.innerText !== "0" && num.innerText !== "1"){
             plural.innerText = "s"
+        }else{
+            plural.innerText = ""
         }
         
         let data = JSON.stringify(tasks)
