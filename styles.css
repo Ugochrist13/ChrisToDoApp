@@ -116,13 +116,27 @@ section{
         font-size: 2em;
         font-weight: 500;
     }
+    .clear{
+        width: 80%;
+        height: 45px;
+    }
+    .addTask{
+        height: 70px;
+    }
 }
 @media screen and (max-width: 500px) {
     .calc{
-        width: 80%;
+        width: 90%;
     }
     .name{
         font-size: 1.5em;
         font-weight: 300;
+    }
+    .clear{
+        width: 90%;
+        height: 30px;
+    }
+    .addTask{
+        height: 50px;
     }
 }
