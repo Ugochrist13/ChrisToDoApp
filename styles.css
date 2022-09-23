@@ -57,6 +57,7 @@ section{
     outline-color: blue;
     padding: 0px 10px;
     letter-spacing: 0.01em;
+    margin-left: 5px;
     overflow-wrap: break-word;
     font-size: 1.2em;
     cursor: pointer;
@@ -92,7 +93,7 @@ section{
 .editCont{
     display: flex;
     align-items: center;
-    column-gap: 5px;
+    column-gap: 10px;
 }
 .taskList li button{
     border-radius: 6px;
@@ -105,7 +106,7 @@ section{
     cursor: pointer;
 }
 #edit{
-    margin-left: 50px;
+    margin-left: 10px;
     color: blue;
     outline-color: blue;
 }
@@ -116,6 +117,7 @@ section{
     justify-content: space-between;
     font-size: small;
     font-weight: 700;
+    margin-top: 10px;
     width: 40%;
     height: 50px;
     color: red;
@@ -130,6 +132,7 @@ section{
     border-radius: 6px;
     border: none;
     color: blue;
+    margin-left: 5px;
     outline-color: red;
     font-weight: 700;
     padding: 0px 10px;
