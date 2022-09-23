@@ -20,7 +20,7 @@ section{
    font-weight: 700;
 }
 .calc{
-    width: 50%;
+    width: 60%;
     background-color: silver;
     display: flex;
     flex-direction: column;
@@ -54,12 +54,14 @@ section{
     border: none;
     color: blue;
     font-weight: 700;
+    outline-color: blue;
     padding: 0px 10px;
     letter-spacing: 0.01em;
     overflow-wrap: break-word;
     font-size: 1.2em;
     cursor: pointer;
 }
+
 .taskList{
     width: 95%;
     display: flex;
@@ -77,19 +79,25 @@ section{
     justify-content: space-between;
     color: blue;
 }
-.taskList input{
+.taskList li input{
+    width: 80%;
     color: brown;
     font-size: 1.1em;
     font-weight: 300;
     outline: none;
+    overflow-wrap: break-word;
     background-color: silver;
     border: none;
+}
+.editCont{
+    display: flex;
+    align-items: center;
+    column-gap: 5px;
 }
 .taskList li button{
     border-radius: 6px;
     border: none;
     font-weight: 400;
-    color: red;
     padding: 2px 4px;
     overflow-wrap: break-word;
     letter-spacing: 0.01em;
@@ -97,25 +105,32 @@ section{
     cursor: pointer;
 }
 #edit{
+    margin-left: 50px;
     color: blue;
+    outline-color: blue;
 }
 .clear{
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    font-size: smaller;
+    font-size: small;
     font-weight: 700;
-    width: 70%;
+    width: 40%;
     height: 50px;
     color: red;
 }
-
+.del{
+    margin-left: 5px;
+    color: red;
+    outline-color: red;
+}
 #clear{
     height: 70%;
     border-radius: 6px;
     border: none;
     color: blue;
+    outline-color: red;
     font-weight: 700;
     padding: 0px 10px;
     overflow-wrap: break-word;
@@ -128,14 +143,14 @@ section{
 }
 @media screen and (max-width: 950px) {
     .calc{
-        width: 60%;
+        width: 80%;
     }
     .name{
         font-size: 2em;
         font-weight: 500;
     }
     .clear{
-        width: 80%;
+        width: 50%;
         height: 45px;
     }
     .addTask{
@@ -144,14 +159,14 @@ section{
 }
 @media screen and (max-width: 500px) {
     .calc{
-        width: 90%;
+        width: 98%;
     }
     .name{
         font-size: 1.5em;
         font-weight: 300;
     }
     .clear{
-        width: 90%;
+        width: 60%;
         height: 30px;
     }
     .addTask{
