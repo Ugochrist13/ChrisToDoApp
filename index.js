@@ -28,8 +28,7 @@ if(localStorage.getItem("tasks") == null){
         editCont.appendChild(editbtn)
         const delbtn = document.createElement("button")
         delbtn.innerText = "Delete"
-        delbtn.setAttribute("class", "del")
-        delbtn.setAttribute("onclick", "del(this, index)")
+        delbtn.setAttribute("onclick", "del(this," + index + ")")
         editCont.appendChild(delbtn)
         newTask.appendChild(editCont)
         taskList.appendChild(newTask)
@@ -62,8 +61,8 @@ if(localStorage.getItem("tasks") == null){
 const del = function(e, currentIndex){
     let word = ("Delete Task?")
     if(confirm(word) == true){
-        e.parentElement.remove()
-    tasks.splice(currentIndex, 1)
+        e.parentElement.parentElement.remove()
+        tasks.splice(currentIndex, 1)
     if(tasks !== "[]"){
         num.innerText = tasks.length
     }else{
@@ -101,6 +100,7 @@ clearbtn.addEventListener("click", function(e){
 addbtn.addEventListener("click", function(e, index){
     e.preventDefault()
     if(input.value != ""){
+        let ind = (tasks.length-1)
         const newTask = document.createElement("li")
         const task = document.createElement("input")
         task.setAttribute("readonly", "readonly")
@@ -115,8 +115,7 @@ addbtn.addEventListener("click", function(e, index){
         editCont.appendChild(editbtn)
         const delbtn = document.createElement("button")
         delbtn.innerText = "Delete"
-        delbtn.setAttribute("class", "del")
-        delbtn.setAttribute("onclick", "del(this, index)")
+        delbtn.setAttribute("onclick", "del(this," + ind + ")")
         editCont.appendChild(delbtn)
         newTask.appendChild(editCont)
         taskList.appendChild(newTask)
