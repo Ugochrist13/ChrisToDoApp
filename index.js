@@ -28,6 +28,7 @@ if(localStorage.getItem("tasks") == null){
         editCont.appendChild(editbtn)
         const delbtn = document.createElement("button")
         delbtn.innerText = "Delete"
+        delbtn.setAttribute("class", "del")
         delbtn.setAttribute("onclick", "del(this," + index + ")")
         editCont.appendChild(delbtn)
         newTask.appendChild(editCont)
@@ -100,7 +101,6 @@ clearbtn.addEventListener("click", function(e){
 addbtn.addEventListener("click", function(e, index){
     e.preventDefault()
     if(input.value != ""){
-        let ind = (tasks.length-1)
         const newTask = document.createElement("li")
         const task = document.createElement("input")
         task.setAttribute("readonly", "readonly")
@@ -115,7 +115,8 @@ addbtn.addEventListener("click", function(e, index){
         editCont.appendChild(editbtn)
         const delbtn = document.createElement("button")
         delbtn.innerText = "Delete"
-        delbtn.setAttribute("onclick", "del(this," + ind + ")")
+        delbtn.setAttribute("class", "del")
+        delbtn.setAttribute("onclick", "del(this," + index + ")")
         editCont.appendChild(delbtn)
         newTask.appendChild(editCont)
         taskList.appendChild(newTask)
